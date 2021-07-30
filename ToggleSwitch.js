@@ -87,6 +87,8 @@
      animationSpeed: 300,
      useNativeDriver: true,
      circleColor: "white",
+     colors: ['#C932C3', '#EF8732'],
+     angle: true,
    };
 
    offsetX = new Animated.Value(0);
@@ -139,6 +141,8 @@
        labelStyle,
        label,
        icon,
+       angle,
+       colors,
      } = this.props;
 
      let toValue;
@@ -168,8 +172,8 @@
          >
          {isOn ?
            <LinearGradient
-             colors={['#C932C3', '#EF8732']}
-             useAngle={true}
+             colors={colors}
+             useAngle={angle}
              style={this.createToggleSwitchStyle()}
              angle={180}
            >
